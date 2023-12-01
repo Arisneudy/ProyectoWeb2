@@ -26,27 +26,84 @@ main {
 
 /* Clases para diferentes tipos de Pokémon */
 .grass {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-top: 20px;
     background-color: #4caf50;
     border-radius: 10px;
     color: #fff;
 }
 
-.fire{
+.fire {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-top: 20px;
     background-color: #ff9800;
     border-radius: 10px;
     color: #fff;
 }
 
-.water{
+.water {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-top: 20px;
     background-color: #2196f3;
     border-radius: 10px;
     color: #fff;
 }
 
 .electric {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-top: 20px;
     background-color: #ffeb3b;
     border-radius: 10px;
     color: #000;
+}
+
+.poison {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-top: 20px;
+    background-color: #9c27b0;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.flying {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-top: 20px;
+    background-color: rgb(146, 219, 253);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.bug {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-top: 20px;
+    background-color: #d3ffa0;
+    border-radius: 10px;
+    color: #000;
+}
+
+.normal {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-top: 20px;
+    background-color: #a6b4c1;
+    border-radius: 10px;
+    color: #fff;
+    ;
 }
 
 /* Agrega más clases según sea necesario para otros tipos de Pokémon */

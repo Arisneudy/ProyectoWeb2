@@ -8,8 +8,8 @@ var container = document.getElementById("pokemon-container");
 function showPokemonDetails(pokemon) {
   Swal.fire({
     title: `Detalles de ${pokemon.name}`,
-    html: `<p>Tipos: ${getPokemonTypeParagraph(pokemon.types)}</p>
-           <p>Imagen: <img src="${pokemon.sprites.front_default}" alt="${
+    html: `<p>${getPokemonTypeParagraph(pokemon.types)}</p>
+           <p><img src="${pokemon.sprites.front_default}" alt="${
       pokemon.name
     }" /></p>
            <p>Estadísticas:</p>
@@ -19,7 +19,7 @@ function showPokemonDetails(pokemon) {
 
 // Función para obtener párrafo de tipos de Pokémon
 function getPokemonTypeParagraph(types) {
-  return types.map(type => `<span class="${type.type.name.toLowerCase()}">${type.type.name}</span>`).join(', ');
+  return types.map(type => `<span class="${type.type.name.toLowerCase()}">${type.type.name}</span>`).join(' ');
 }
 
 // Función para obtener lista de estadísticas de Pokémon
