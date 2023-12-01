@@ -3,7 +3,6 @@ import { GetAllPokemon, GetPokemonByName } from "./IPockeApi.js";
 import { showPokemonDetails } from "./alertas.js";
 
 // Variables
-
 function LoadPokes() {
   var container = document.getElementById("pokemon-container");
 
