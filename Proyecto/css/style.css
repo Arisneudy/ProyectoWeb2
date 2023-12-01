@@ -106,8 +106,6 @@ main {
     ;
 }
 
-/* Agrega más clases según sea necesario para otros tipos de Pokémon */
-
 .buscador>form {
     display: flex;
     justify-content: space-between;
@@ -117,6 +115,11 @@ main {
 
 .form-control {
     margin-right: 10px;
+}
+
+.hab-poken li{
+    display: flex;
+    justify-content: left;
 }
 
 img {

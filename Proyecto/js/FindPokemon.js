@@ -13,8 +13,9 @@ form.addEventListener("submit", function (e) {
 
   // Array para almacenar todas las promesas
   const promises = [];
-  
-    const promise = GetPokemonByName(name).then((poke) => {
+
+  const promise = GetPokemonByName(name)
+    .then((poke) => {
       console.log(poke);
       var types = "";
       for (let e = 0; e < poke.types.length; e++) {
@@ -40,9 +41,17 @@ form.addEventListener("submit", function (e) {
       lastPokemonBox.addEventListener("click", function () {
         showPokemonDetails(poke);
       });
-    }).catch (error =>  {
-      container.innerHTML = '';
-      LoadPokes();
     })
-
+    .catch((error) => {
+      Swal.fire({
+        icon: "error",
+        title: "Pokemon no encontrado",
+        confirmButtonText: "Ok",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          LoadPokes();
+        }
+      });
+      LoadPokes();
+    });
 });

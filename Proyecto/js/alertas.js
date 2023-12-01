@@ -7,7 +7,7 @@ function showPokemonDetails(pokemon) {
       pokemon.name
     }" /></p>
            <p>Estadísticas:</p>
-           <ul>${getPokemonStatsList(pokemon.stats)}</ul>`,
+           <ul class="hab-poken">${getPokemonStatsList(pokemon.stats)}</ul>`,
   });
 }
 

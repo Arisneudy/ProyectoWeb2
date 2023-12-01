@@ -4,13 +4,13 @@ import { showPokemonDetails } from "./alertas.js";
 
 // Variables
 
-function LoadPokes(){
+function LoadPokes() {
   var container = document.getElementById("pokemon-container");
 
   // Carga la información de los Pokémon
   GetAllPokemon().then((pokemonList) => {
     const promises = [];
-  
+
     for (let i = 0; i < 20; i++) {
       const promise = GetPokemonByName(pokemonList.results[i].name).then(
         (poke) => {
@@ -31,26 +31,25 @@ function LoadPokes(){
                     </div>
                 </div>`;
           container.insertAdjacentHTML("beforeend", pokeDiv); // Agregar la caja de Pokémon al contenedor
-  
+
           // Obtener la última caja de Pokémon agregada
           var lastPokemonBox = container.lastElementChild;
-  
+
           // Agregar un evento de clic a la última caja de Pokémon
           lastPokemonBox.addEventListener("click", function () {
             showPokemonDetails(poke);
           });
         }
       );
-  
+
       promises.push(promise);
     }
-  
+
     // Esperar a que todas las promesas se resuelvan
     Promise.all(promises).then(() => {
       console.log("Pokémons cargados");
     });
   });
-  
 }
 
-export{LoadPokes};
+export { LoadPokes };
