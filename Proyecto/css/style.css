@@ -108,7 +108,7 @@ main {
 
 /* Agrega más clases según sea necesario para otros tipos de Pokémon */
 
-.buscador {
+.buscador>form {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;

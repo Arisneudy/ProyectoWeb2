@@ -1,22 +1,26 @@
 import { GetPokemonByName } from "./IPockeApi.js";
+import { showPokemonDetails } from "./alertas.js";
+import { LoadPokes } from "./LoadPokemons.js";
 
-var btn = document.getElementById("btn-buscador"),
+var form = document.getElementById("form-buscar"),
   txt = document.getElementById("txt-buscador");
 
-btn.addEventListener("click", function (e) {
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
   var name = txt.value;
   var container = document.getElementById("pokemon-container");
   var divpoke = "";
 
   // Array para almacenar todas las promesas
   const promises = [];
-
-  const promise = GetPokemonByName(name).then((poke) => {
-    var types = "";
-    for (let e = 0; e < poke.types.length; e++) {
-      types += `<p class = "${poke.types[e].type.name}">${poke.types[e].type.name}</p>`;
-    }
-    var pokeDiv = `<div class="pokemon-box">
+  
+    const promise = GetPokemonByName(name).then((poke) => {
+      console.log(poke);
+      var types = "";
+      for (let e = 0; e < poke.types.length; e++) {
+        types += `<p class = "${poke.types[e].type.name}">${poke.types[e].type.name}</p>`;
+      }
+      var pokeDiv = `<div class="pokemon-box">
                         <div class="pokemon">
                             <div class="pokemon-img">
                                 <img src=${poke.sprites.front_default} alt="" />
@@ -27,14 +31,18 @@ btn.addEventListener("click", function (e) {
                             </div>
                         </div>
                     </div>`;
-    divpoke += `${pokeDiv}`;
-  });
+      container.innerHTML = pokeDiv; // Agregar la caja de Pokémon al contenedor
 
-  promises.push(promise);
+      // Obtener la última caja de Pokémon agregada
+      var lastPokemonBox = container.lastElementChild;
 
-  // Esperar a que todas las promesas se resuelvan
-  Promise.all(promises).then(() => {
-    container.innerHTML = `${divpoke}`;
-    console.log(divpoke);
-  });
+      // Agregar un evento de clic a la última caja de Pokémon
+      lastPokemonBox.addEventListener("click", function () {
+        showPokemonDetails(poke);
+      });
+    }).catch (error =>  {
+      container.innerHTML = '';
+      LoadPokes();
+    })
+
 });

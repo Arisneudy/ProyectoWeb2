@@ -27,13 +27,17 @@
         <div class="row">
           <div class="col-md-6 offset-md-3">
             <div class="buscador">
-              <input
+
+              <form id="form-buscar">
+                <input
                 type="text"
                 class="form-control"
                 placeholder="Buscar"
                 id="txt-buscador"
               />
               <button class="btn btn-primary" id="btn-buscador">Buscar</button>
+              </form>
+              
             </div>
           </div>
         </div>
@@ -49,6 +53,7 @@
     </footer>
     <script defer type="module" src="js/LoadPokemons.js"></script>
     <script defer type="module" src="js/FindPokemon.js"></script>
+    <script defer type="module" src="js/loadpage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   </body>
