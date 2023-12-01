@@ -14,10 +14,10 @@ btn.addEventListener("click", function (e) {
   const promise = GetPokemonByName(name).then((poke) => {
     var types = "";
     for (let e = 0; e < poke.types.length; e++) {
-      types += `<p>${poke.types[e].type.name}</p>`;
+      types += `<p class = "${poke.types[e].type.name}">${poke.types[e].type.name}</p>`;
     }
     var pokeDiv = `<div class="pokemon-box">
-                        <div class="pokemon grass">
+                        <div class="pokemon">
                             <div class="pokemon-img">
                                 <img src=${poke.sprites.front_default} alt="" />
                             </div>
