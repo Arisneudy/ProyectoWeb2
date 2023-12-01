@@ -36,7 +36,7 @@ GetAllPokemon().then((pokemonList) => {
       (poke) => {
         var types = "";
         for (let e = 0; e < poke.types.length; e++) {
-          types += `<p>${poke.types[e].type.name}</p>`;
+          types += `<p class = "${poke.types[e].type.name}">${poke.types[e].type.name}</p>`;
         }
         // Cambiado la clase a "pokemon-box"
         var pokeDiv = `<div class="pokemon-box">
@@ -44,9 +44,9 @@ GetAllPokemon().then((pokemonList) => {
                       <div class="pokemon-img">
                           <img src=${poke.sprites.front_default} alt="" />
                       </div>
-                      <div class="pokemon-info ${poke.types[0].type.name.toLowerCase()}">
+                      <div class="pokemon-info">
                           <h2>${poke.name}</h2>
-                          <p>${types}</p>
+                          ${types}
                       </div>
                   </div>
               </div>`;

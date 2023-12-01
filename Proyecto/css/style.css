@@ -25,25 +25,25 @@ main {
 }
 
 /* Clases para diferentes tipos de Pokémon */
-.grass>p {
+.grass {
     background-color: #4caf50;
     border-radius: 10px;
     color: #fff;
 }
 
-.fire>p{
+.fire{
     background-color: #ff9800;
     border-radius: 10px;
     color: #fff;
 }
 
-.water>p {
+.water{
     background-color: #2196f3;
     border-radius: 10px;
     color: #fff;
 }
 
-.electric>p {
+.electric {
     background-color: #ffeb3b;
     border-radius: 10px;
     color: #000;
