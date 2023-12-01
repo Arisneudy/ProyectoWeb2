@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.pokemon-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.pokemon {
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+/* Clases para diferentes tipos de Pokémon */
+.grass>p {
+    background-color: #4caf50;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.fire>p{
+    background-color: #ff9800;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.water>p {
+    background-color: #2196f3;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.electric>p {
+    background-color: #ffeb3b;
+    border-radius: 10px;
+    color: #000;
+}
+
+/* Agrega más clases según sea necesario para otros tipos de Pokémon */
+
+.buscador {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    margin-right: 10px;
+}
+
+img {
+    width: 10rem;
+}
+
+header,
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer>p {
+    margin-bottom: 0;
+}
