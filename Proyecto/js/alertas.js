@@ -8,8 +8,8 @@ function showPokemonDetails(pokemon) {
     }" /></p>
            <p>Estadísticas:</p>
            <ul class="hab-poken">${getPokemonStatsList(pokemon.stats)}
-              <li>weight: ${pokemon.weight}</li>
-              <li>height: ${pokemon.height}</li>
+              <li>weight: ${(pokemon.weight/10)}kg</li>
+              <li>height: ${(pokemon.height/10)}m</li>
            </ul>`,
   });
 }

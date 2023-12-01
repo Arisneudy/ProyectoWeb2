@@ -49,9 +49,11 @@ form.addEventListener("submit", function (e) {
         confirmButtonText: "Ok",
       }).then((result) => {
         if (result.isConfirmed) {
+          container.innerHTML = ''; 
           LoadPokes();
         }
       });
+      container.innerHTML = ''; 
       LoadPokes();
     });
 });
